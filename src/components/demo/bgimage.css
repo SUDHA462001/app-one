@@ -1,0 +1,21 @@
+.img-fluid {
+margin-top: 50px;
+max-width: 100%;
+height: auto;
+margin-left: 2%;
+margin-right: 10%;
+}
+
+.responsive-font-example{
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: 2rem;
+background-size: cover;
+margin-left: 500px;
+}
+
+@media (min-width: 1200px) {
+    .responsive-font-example {
+      font-size: 80px;
+    }
+  }
+ 

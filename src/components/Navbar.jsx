@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
+
+
 import './Navbar.css';
 
 function Navbar() {
@@ -30,20 +32,46 @@ function Navbar() {
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
             ABCD
-            <i class='fab fa-typo3' />
+            <i className='fab fa-typo3' />
           </Link>
-          <div className='menu-icon' onClick={handleClick}>
-            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-          </div>
-          <div class="input-group mb-3 w-25">
-  <input type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1"/>
-</div>
+
+
+
+          {/* <div class="container shadow min-vh-100 py-4"> */}
+          
+    <div class="row">
+        <div class="col-md-25 mx-auto">
+            {/* <div class="small fw-light">search input with icon</div> */}
+            <div class="input-group">
+                <input class="form-control border-end-0 border rounded-pill" type="search" value="" placeholder='' id="example-search-input"/>
+                <span class="input-group-append">
+                    
+                    
+                        <i class="fa fa-search"></i>
+                   
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
               <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                 Home
               </Link>
             </li>
+            <li className='nav-item'>
+              <Link
+                to='/services'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                Services
+              </Link>
+            </li>
+            
             <li className='nav-item'>
               <Link
                 to='/services'
@@ -76,6 +104,7 @@ function Navbar() {
           </ul>
           {/* {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>} */}
         </div>
+
       </nav>
     </>
   );
